@@ -1,12 +1,10 @@
 package com.example.wn.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.hibernate.annotations.Proxy;
-
 import javax.persistence.*;
 
-@Entity
 @Table(name = "wn_user")
+@Entity
 @JsonIgnoreProperties({"handler","hibernateLazyInitializer"})
 public class User {
     @Id
@@ -17,6 +15,15 @@ public class User {
     String password;
 
     public User() {
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 
     public int getId() {
