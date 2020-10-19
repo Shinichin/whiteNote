@@ -7,6 +7,8 @@ spring:
     username: root
     password: psd10086!
     driver-class-name: com.mysql.cj.jdbc.Driver
+    # 每次运行时初始化数据库，如不需要可以注释掉
+    initialization-mode: always
   jpa:
     hibernate:
       ddl-auto: none

@@ -19,6 +19,12 @@ public class MyWebConfigurer implements WebMvcConfigurer {
         // excludePathPatterns 用户排除拦截
         registry.addInterceptor(getLoginIntercepter()).addPathPatterns("/**").excludePathPatterns("/index.html");
     }
+    //项目图片资源文件夹
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/api/file/**").addResourceLocations("file:" + "d:/workspace/img/");
+    }
+
 }
 
 

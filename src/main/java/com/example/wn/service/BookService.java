@@ -34,6 +34,12 @@ public class BookService {
         Category category = categoryService.get(cid);
         return bookDAO.findAllByCategory(category);
     }
+//搜索
+//    根据标题或作者进行模糊查询（对应两个字段）
+    public List<Book> Search(String keywords) {
+        return bookDAO.findAllByTitleLikeOrAuthorLike('%' + keywords + '%', '%' + keywords + '%');
+    }
+
 }
 
 
