@@ -2,9 +2,13 @@ package com.example.wn.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Table(name = "wn_user")
 @Entity
+@Getter
+@Setter
 @JsonIgnoreProperties({"handler","hibernateLazyInitializer"})
 public class User {
     @Id

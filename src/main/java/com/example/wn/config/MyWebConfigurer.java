@@ -4,12 +4,12 @@ import com.example.wn.interceptor.LoginInterceptor;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.*;
-//把拦截器配置到项目中
 @SpringBootConfiguration
 public class MyWebConfigurer implements WebMvcConfigurer {
-
+    //把拦截器配置到项目中
     @Bean
     public LoginInterceptor getLoginIntercepter() {
+
         return new LoginInterceptor();
     }
 
